@@ -1,0 +1,1 @@
+from .memes_service_client import *

@@ -1,0 +1,43 @@
+{
+  "consumer": {
+    "name": "Memes-Website"
+  },
+  "provider": {
+    "name": "Memes-Service"
+  },
+  "interactions": [
+    {
+      "description": "a requests for meme with id 1234",
+      "providerState": "Meme with id 1234 does not exist",
+      "request": {
+        "method": "get",
+        "path": "/meme/1234"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+        },
+        "body": "{\"error\": \"Meme with id 1234 not found.\"}"
+      }
+    },
+    {
+      "description": "a requests for meme with id 0",
+      "providerState": "Meme with id 0 exists",
+      "request": {
+        "method": "get",
+        "path": "/meme/0"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": "{\"id\": 0, \"starts\": 4.6, \"url\": \"https://wyncode.co/wp-content/uploads/2014/08/171.jpg\"}"
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
